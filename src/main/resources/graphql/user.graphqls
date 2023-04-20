@@ -1,0 +1,11 @@
+# 用户相关的graphqls
+type User {
+    id: Long
+    name: String
+    gender: Int
+    birthday: DateTime
+}
+
+extend type Query {
+    user(id: Long): User
+}

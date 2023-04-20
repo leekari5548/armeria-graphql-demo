@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>cn.leekari</groupId>
+    <artifactId>graphql-demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>graphql-demo</name>
+    <description>graphql-demo</description>
+    <properties>
+        <java.version>11</java.version>
+    </properties>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.linecorp.armeria/armeria -->
+        <dependency>
+            <groupId>com.linecorp.armeria</groupId>
+            <artifactId>armeria</artifactId>
+<!--            <version>1.23.1</version>-->
+        </dependency>
+
+        <dependency>
+            <groupId>com.linecorp.armeria</groupId>
+            <artifactId>armeria-graphql</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.graphql-java</groupId>
+            <artifactId>graphql-java-extended-scalars</artifactId>
+            <version>20.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.graphql-java-kickstart/graphql-java-tools -->
+        <dependency>
+            <groupId>com.graphql-java-kickstart</groupId>
+            <artifactId>graphql-java-tools</artifactId>
+            <version>13.0.3</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>5.0.1</version>
+        </dependency>
+
+
+
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+        </dependency>
+
+
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.linecorp.armeria</groupId>
+                <artifactId>armeria-bom</artifactId>
+                <version>1.23.1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

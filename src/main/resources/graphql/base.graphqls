@@ -1,0 +1,18 @@
+#通用graphqls定义
+
+scalar DateTime
+scalar Long
+scalar Date
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Query {
+    version: String
+}
+
+type Mutation {
+    version: String
+}

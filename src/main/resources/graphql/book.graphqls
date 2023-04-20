@@ -1,0 +1,18 @@
+# Book相关的graphqls
+type Book{
+    id: Long!
+    name: String
+    author: User!
+    publishTime: Date
+}
+
+
+
+extend type Query {
+    findBook(id: Long): Book!
+    books(page: Int, offset: Int): [Book]
+}
+
+extend type Mutation {
+    addBook(name: String, authorId: Long, publishTime: String): Book
+}
